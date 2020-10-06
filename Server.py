@@ -7,8 +7,8 @@ x = datetime.datetime.now()
 date = x.strftime('%d-%m-%Y') 
 time = x.strftime("%X")
 
-data_String = '{"date" : "'+ date +'"}'
-time_String = '{"time": "'+ time +'"}'
+data_string = '{"date" : "'+ date +'"}'
+time_string = '{"time": "'+ time +'"}'
 
 HOST = '127.0.0.1'  
 PORT = 65432        
@@ -32,13 +32,13 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
                 #Pega mensagem recebidade, e entra em um if
                 if data_teste == "get_date":
                     #Envia para o cliente a data em formato de String
-                    conn.sendall(bytes(data_String,"utf-8"))
-                    print("Payload:",data_String)
+                    conn.sendall(bytes(data_string,"utf-8"))
+                    print("Payload:",data_string)
 
                 elif data_teste == "get_time":
                     #Envia para o cliente o horario em formato de String
-                    conn.sendall(bytes(time_String,"utf-8"))
-                    print("Payload:",time_String)
+                    conn.sendall(bytes(time_string,"utf-8"))
+                    print("Payload:",time_string)
 
                 elif data_teste == "exit":
                     conn.sendall(bytes("Fechamento da conexao","utf-8"))

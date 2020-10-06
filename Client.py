@@ -11,7 +11,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     
     #Pega informações recebidas e passa para a variavel data
     data = s.recv(1024)
-    data1 = (data.decode('utf-8'))
-    if (data1 != "Fechamento da conexao") and (data1 != "Invalid Command!!!"):
-        data1 = json.loads(data1)
-    print(data1)
+    recieved_data = (data.decode('utf-8'))
+    if (recieved_data != "Fechamento da conexao") and (recieved_data != "Invalid Command!!!"):
+        recieved_data = json.loads(recieved_data)
+    print(recieved_data)
