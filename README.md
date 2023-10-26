@@ -66,8 +66,4 @@ Lembre-se de que essas explicações fornecem uma visão geral das funções em 
 
 ## Autor
 
-Seu Nome
-
-## Licença
-
-Este projeto é licenciado sob a Licença XYZ - veja o arquivo [LICENSE](LICENSE) para obter detalhes.
+Ana Athayde
